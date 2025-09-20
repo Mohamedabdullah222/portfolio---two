@@ -1,6 +1,7 @@
 import React from 'react'
 import { services } from '../data/Services'
 import { IoIosArrowRoundForward } from 'react-icons/io'
+import { FaSquareGithub } from 'react-icons/fa6'
 
 const Services = () => {
   return (
@@ -12,7 +13,9 @@ const Services = () => {
             <div className="grid grid-cols-auto gap-6 my-10">
                 {services.map((service) => (
                     <div key={service.id} className="border border-gray-300 dark:border-white/30 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 transition duration-700 dark:hover:bg-darkHover dark:hover:shadow-white">
-                        <img src={service.icon} alt="" className="w-10" />
+                        <FaSquareGithub className="text-3xl" />
+
+                        {/* <img src={service.icon} alt="" className="w-10" /> */}
                         <h3 className="text-lg my-4 text-gray-700 dark:text-white">{service.name}</h3>
                         <p className="text-sm text-gray-600 leading-5 dark:text-white/80">{service.description}</p>
                         <a href={service.link}
